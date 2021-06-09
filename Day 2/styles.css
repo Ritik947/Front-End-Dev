@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+.wrapper{
+    font-family: Lato, sans-serif;
+    background-color: blanchedalmond;
+    background-image: url(./images/logo.png);
+    background-position: 50%;
+    background-blend-mode: soft-light;
+    background-size: 400px;
+    background-repeat: no-repeat;
+    width: 60vw;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-color: rgb(81, 20, 20, 0.3);
+    border-style: groove;
+    padding: 10px 10px;
+}
+
+.wrapper div{
+    margin-bottom: 15px;
+}
+
+.wrapper .subject{
+    font-weight: 600;
+    text-align: center;
+    padding: 20px 0px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper .tofrom{
+    font-size: 17px;
+}
+
+.wrapper .salutation, .close{
+    font-size: 17px;
+}
+
+.wrapper .date{
+    font-family: monospace;
+    font-size: 18px;
+}
+
+.wrapper .main{
+    font-size: 16px;
+}
