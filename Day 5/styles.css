@@ -1,0 +1,94 @@
+body
+{
+    background-color: #F1F3E5;
+}
+
+.container
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    box-shadow: 8px 8px 5px 1px #333333;
+}
+
+.container table
+{
+    border-radius: 20px;
+    box-shadow: 2px 2px 0px 4px silver;
+    background-color: #222222;
+}
+
+input 
+{
+    outline: 0;
+    border: 0;
+    position: relative;
+    color: #222;
+    background-color: #bbb;
+    border-radius: 5px;
+    width: 60px;
+    height: 50px;
+    float: left;
+    font-size: 20px;
+    margin: 5px 1px 5px 4px;
+    box-shadow: 0px 0px 2px 3px rgba(0,0,0,0.4);
+    margin-top: 15px;
+}
+
+input:active 
+{
+    border: 0 solid #000;
+    color: #222;
+    background-color: #bbb;
+    border-radius: 4px;
+    width: 58px;
+    height: 48px;
+    float: left;
+    margin: 5px 1px 5px 4px;
+    font-size: 20px;
+    box-shadow: 0px 0px 1px 3px rgba(0,0,0,0.5);
+    margin-top: 15px;
+    text-align: center;
+}
+
+#display 
+{
+    top: 5px;
+    width: 310px;
+    height: 50px;
+    font-size: 26px;
+    text-align: right;
+    background-color: #bcbd95;
+    float: left;
+}
+
+.operator 
+{
+    background-color: #cee9ea;
+    position: relative;
+}
+
+.operator:active
+{
+    background-color: #cee9ea;
+    position: relative;
+}
+
+#clr 
+{
+    float: left;
+    position: relative;
+    display: block;
+    background-color: #ff90a8;
+}
+
+#ans 
+{
+    float: left;
+    position: relative;
+    display: block;
+    background-color: #80b0ff;
+}
+
