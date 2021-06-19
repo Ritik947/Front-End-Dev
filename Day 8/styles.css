@@ -18,36 +18,21 @@
   background: #fff;
 }
 
-.frame .block{
-    background: rgb(222, 71, 56);
-    width: 20px;
-    height: 20px;
-    object-fit: contain;
-    outline: none;
-    border: 1px solid rgb(226, 78, 63);
+.block{
+    width: 19px;
+    height: 19px;
 }
 
-.frame .block:hover{
+.clicked{
+    background: rgb(222, 71, 56);
+    border: 1px solid rgb(226, 78, 63);
+    width: 19px;
+    height: 19px;
+}
+
+.clicked:hover{
     background-color: rgb(236, 81, 66);
 }
-
-input:checked{
-  content: '';
-  opacity: 0.00;
-  width: 19px;
-  height: 19px;
-  background: rgb(226, 78, 63);
-}
-
-.frame .block input{
-    position: relative;
-    left: -5px;
-    top: -4px;
-    outline: none;
-    border: none;
-    width: 20px;
-    height: 20px;
-  }
 
 .center {
   position: absolute;
