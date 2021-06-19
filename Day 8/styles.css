@@ -1,0 +1,57 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/*use only the available space inside the 400x400 frame*/
+.frame {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(20,20px);
+  grid-template-rows: repeat(20,20px);
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+  background: #fff;
+}
+
+.frame .block{
+    background: rgb(222, 71, 56);
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    outline: none;
+    border: 1px solid rgb(226, 78, 63);
+}
+
+.frame .block:hover{
+    background-color: rgb(236, 81, 66);
+}
+
+input:checked{
+  content: '';
+  opacity: 0.00;
+  width: 19px;
+  height: 19px;
+  background: rgb(226, 78, 63);
+}
+
+.frame .block input{
+    position: relative;
+    left: -5px;
+    top: -4px;
+    outline: none;
+    border: none;
+    width: 20px;
+    height: 20px;
+  }
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
