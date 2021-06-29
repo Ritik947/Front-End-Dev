@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Baloo Tammudu 2", cursive;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  background-color: aqua;
+  align-items: center;
+}
+
+header {
+  /* visibility: hidden; */
+  width: 100vw;
+  height: 10vh;
+  text-align: center;
+  background-color: #79b9e7;
+}
+
+header img {
+  height: 9vh;
+}
+
+.summary {
+  top: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20vw;
+  height: 90vh;
+  font-size: 3vh;
+  background-color: #007dc6;
+  color: aliceblue;
+  text-align: center;
+  padding: 5vh 0 15vh 0;
+}
+
+.comp {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #e7f0f7;
+}
+
+#getTodo {
+  margin: 2vh auto;
+  display: flex;
+}
+
+input {
+  width: 20vw;
+  height: 5vh;
+  background-color: white;
+  border: none;
+  outline: none;
+  text-align: center;
+  border-radius: 5vh;
+  margin-right: 2vw;
+}
+
+#add {
+  width: 5vw;
+  height: 5vh;
+  border: none;
+  outline: none;
+  background-color: #007dc6;
+  color: white;
+  border-radius: 5vh;
+}
+
+#scheduled {
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+  height: 81vh;
+}
+
+#scheduled::-webkit-scrollbar {
+  visibility: hidden;
+}
+
+.todo {
+  width: 60vw;
+  min-height: 10vh;
+  padding: 1vh;
+  margin-top: 3vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  box-shadow: 0 0 5px 2px gray;
+}
+
+.todo .removeTask {
+  width: 5vw;
+  height: 5vh;
+  border: none;
+  outline: none;
+  background-color: #007dc6;
+  color: white;
+  border-radius: 5vh;
+}

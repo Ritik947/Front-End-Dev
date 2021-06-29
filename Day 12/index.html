@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>To-Do App</title>
+  </head>
+  <body onload="loadData()">
+    <header>
+      <img src="./logo.png" alt="Title" />
+    </header>
+    <div class="wrapper">
+      <div class="summary">
+        <!-- <div class="comp">
+          <div id="current">Remaining tasks</div>
+          <div id="current-val"></div>
+        </div>
+        <div class="comp">
+          <div id="completed">Completed tasks</div>
+          <div id="comp-val"></div>
+        </div> -->
+        <div class="comp">
+          <div id="total">Tasks pending</div>
+          <div id="total-val"></div>
+        </div>
+      </div>
+      <main>
+        <div id="getTodo">
+          <input type="text" placeholder="Enter new task" />
+          <button id="add">Add</button>
+        </div>
+        <div id="scheduled"></div>
+      </main>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
