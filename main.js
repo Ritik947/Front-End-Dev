@@ -20,6 +20,7 @@ const day_nos = [
   "11",
   "12",
   "13",
+  "16",
 ];
 
 for (let i = 0; i < day_nos.length; i++) {
@@ -29,7 +30,10 @@ for (let i = 0; i < day_nos.length; i++) {
   pix.setAttribute("class", "pix");
   pix.setAttribute("id", i + 1);
   pix.addEventListener("click", () => {
-    window.location.href = "/Front-End-Dev/Day " + day_nos[i];
+    window.location.href =
+      "/Front-End-Dev/Day " +
+      day_nos[i] +
+      `${day_nos[i] === "16" ? "/build" : ""}`;
   });
   pix.appendChild(text);
   thaGridClass.appendChild(pix);
