@@ -54,12 +54,11 @@ header {
 #quote {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   white-space: wrap;
-  width: 80%;
-  height: 80%;
-  text-align: center;
+  min-height: 80%;
   animation: animated-text 2s steps(30, end) 1s 1 normal both;
   font-size: 25px;
   overflow: hidden;
