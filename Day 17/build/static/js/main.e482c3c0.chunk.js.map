@@ -1,0 +1,34 @@
+{
+  "version": 3,
+  "sources": [
+    "components/Card.jsx",
+    "App.jsx",
+    "index.js"
+  ],
+  "names": [
+    "Card",
+    "props",
+    "food",
+    "name",
+    "calories",
+    "url",
+    "number",
+    "className",
+    "src",
+    "alt",
+    "App",
+    "ReactDOM",
+    "render",
+    "StrictMode",
+    "document",
+    "getElementById"
+  ],
+  "mappings": "gKAyBeA,EAzBF,SAACC,GACZ,IAAMC,EAAO,CACX,CAAEC,KAAM,QAASC,SAAU,MAC3B,CAAED,KAAM,SAAUC,SAAU,MAC5B,CAAED,KAAM,OAAQC,SAAU,OAC1B,CAAED,KAAM,UAAWC,SAAU,OAC7B,CAAED,KAAM,aAAcC,SAAU,MAChC,CAAED,KAAM,YAAaC,SAAU,OAE7BC,EAAM,gBAAkBJ,EAAMK,OAAS,OAC3C,OACE,qBAAKC,UAAU,YAAf,SACE,sBAAKA,UAAU,OAAf,UACE,qBAAKA,UAAU,gBAAf,SACE,qBAAKC,IAAKH,EAAKI,IAAI,OAErB,qBAAKF,UAAU,QAAf,SAAwBL,EAAKD,EAAMK,OAAS,GAAGH,OAC/C,sBAAKI,UAAU,UAAf,uBACaL,EAAKD,EAAMK,OAAS,GAAGF,kBCC7BM,MAhBf,WACE,OACE,sBAAKH,UAAU,MAAf,UACE,+CACA,iCACE,cAAC,EAAD,CAAMD,OAAO,MACb,cAAC,EAAD,CAAMA,OAAO,MACb,cAAC,EAAD,CAAMA,OAAO,MACb,cAAC,EAAD,CAAMA,OAAO,MACb,cAAC,EAAD,CAAMA,OAAO,MACb,cAAC,EAAD,CAAMA,OAAO,aCTrBK,IAASC,OACP,cAAC,IAAMC,WAAP,UACE,cAAC,EAAD,MAEFC,SAASC,eAAe,U",
+  "file": "static/js/main.e482c3c0.chunk.js",
+  "sourcesContent": [
+    "const Card = (props) => {\r\n  const food = [\r\n    { name: \"Pizza\", calories: \"56\" },\r\n    { name: \"Burger\", calories: \"69\" },\r\n    { name: \"Coke\", calories: \"500\" },\r\n    { name: \"Brownie\", calories: \"180\" },\r\n    { name: \"Fried Rice\", calories: \"90\" },\r\n    { name: \"Pani Puri\", calories: \"10\" },\r\n  ];\r\n  let url = \"/images/image\" + props.number + \".jpg\";\r\n  return (\r\n    <div className=\"container\">\r\n      <div className=\"card\">\r\n        <div className=\"img-container\">\r\n          <img src={url} alt=\"\" />\r\n        </div>\r\n        <div className=\"title\">{food[props.number - 1].name}</div>\r\n        <div className=\"calorie\">\r\n          Calories: {food[props.number - 1].calories}\r\n        </div>\r\n      </div>\r\n    </div>\r\n  );\r\n};\r\n\r\nexport default Card;\r\n",
+    "import \"./App.css\";\nimport Card from \"./components/Card\";\n\nfunction App() {\n  return (\n    <div className=\"App\">\n      <header>Foodpedia</header>\n      <main>\n        <Card number=\"1\" />\n        <Card number=\"2\" />\n        <Card number=\"3\" />\n        <Card number=\"4\" />\n        <Card number=\"5\" />\n        <Card number=\"6\" />\n      </main>\n    </div>\n  );\n}\n\nexport default App;\n",
+    "import React from \"react\";\nimport ReactDOM from \"react-dom\";\nimport App from \"./App\";\n\nReactDOM.render(\n  <React.StrictMode>\n    <App />\n  </React.StrictMode>,\n  document.getElementById(\"root\")\n);\n"
+  ],
+  "sourceRoot": ""
+}

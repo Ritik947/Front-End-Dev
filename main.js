@@ -21,6 +21,7 @@ const day_nos = [
   "12",
   "13",
   "16",
+  "17",
 ];
 
 for (let i = 0; i < day_nos.length; i++) {
@@ -33,7 +34,7 @@ for (let i = 0; i < day_nos.length; i++) {
     window.location.href =
       "/Front-End-Dev/Day " +
       day_nos[i] +
-      `${day_nos[i] === "16" ? "/build" : ""}`;
+      `${day_nos[i] >= "16" ? "/build" : ""}`;
   });
   pix.appendChild(text);
   thaGridClass.appendChild(pix);
