@@ -23,33 +23,32 @@ header {
   text-align: center;
 }
 
-main {
+.wrap {
   margin: 30px auto;
   width: 95%;
-  height: 500px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  padding: 15px;
-  background-color: #609dff;
-  border: 5px groove #eee;
-  overflow: scroll;
+  height: 80vh;
+  overflow-y: scroll;
 }
 
-main::-webkit-scrollbar {
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  background-color: #609dff;
+  border: 5px groove #eee;
+  padding: 20px;
+}
+
+.wrap::-webkit-scrollbar {
   display: none;
 }
 
 .container {
-  box-shadow: 0 0 15px 0 black;
+  box-sizing: border-box;
   width: 100%;
-  background-color: azure;
-  cursor: pointer;
-  transition: 0.25s;
-  border-radius: 20px;
 }
 
-.container:hover {
+.card:hover {
   box-shadow: 0 0 10px 0 black;
   transform: scale(1.02);
   transition: 0.25s;
@@ -57,7 +56,12 @@ main::-webkit-scrollbar {
 }
 
 .card {
+  cursor: pointer;
+  box-shadow: 0 0 15px 0 black;
+  background-color: azure;
   width: 100%;
+  transition: 0.25s;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
