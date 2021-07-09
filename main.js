@@ -1,11 +1,4 @@
-const thaGridClass = document.querySelector("#tha-list");
-
-// const createHrefElement = (day_no) => {
-//   let anchor = document.createElement("a");
-//   anchor.href = "/Day " + day_no;
-//   anchor.innerHTML = "Day " + day_no;
-// };
-
+const container = document.querySelector("#tha-container");
 const day_nos = [
   "1",
   "2",
@@ -25,17 +18,15 @@ const day_nos = [
 ];
 
 for (let i = 0; i < day_nos.length; i++) {
-  let pix = document.createElement("div");
-  let text = document.createElement("p");
-  text.innerHTML = "Day " + day_nos[i];
-  pix.setAttribute("class", "pix");
-  pix.setAttribute("id", i + 1);
-  pix.addEventListener("click", () => {
+  let tha = document.createElement("div");
+  tha.innerHTML = "Day " + day_nos[i];
+  tha.setAttribute("class", "tha");
+  tha.setAttribute("id", i + 1);
+  tha.addEventListener("click", () => {
     window.location.href =
       "/Front-End-Dev/Day " +
       day_nos[i] +
-      `${day_nos[i] >= "16" ? "/build" : ""}`;
+      `${parseInt(day_nos[i]) >= 16 ? "/build" : ""}`;
   });
-  pix.appendChild(text);
-  thaGridClass.appendChild(pix);
+  container.appendChild(tha);
 }
