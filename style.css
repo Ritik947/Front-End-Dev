@@ -65,7 +65,7 @@ p:nth-child(1) {
 .tha {
   text-align: center;
   cursor: pointer;
-  font-size: 40px;
+  font-size: 38px;
   min-height: 300px;
   min-width: 120px;
   transform: rotate(90deg);
