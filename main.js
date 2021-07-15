@@ -18,6 +18,7 @@ const day_nos = [
   "18",
   "19",
   "20",
+  "21",
 ];
 
 for (let i = 0; i < day_nos.length; i++) {
