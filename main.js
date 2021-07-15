@@ -28,7 +28,8 @@ for (let i = 0; i < day_nos.length; i++) {
   tha.setAttribute("id", i + 1);
   tha.addEventListener("click", () => {
     window.location.href =
-      "/Front-End-Dev/Day " +
+      "/Front-End-Dev/Day_" +
+      `${parseInt(day_nos[i]) < 10 ? "0" : ""}` +
       day_nos[i] +
       `${parseInt(day_nos[i]) >= 16 ? "/build" : ""}`;
   });
