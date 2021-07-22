@@ -20,6 +20,7 @@ const day_nos = [
   "20",
   "21",
   "22",
+  "23",
 ];
 
 for (let i = 0; i < day_nos.length; i++) {
