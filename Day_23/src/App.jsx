@@ -1,7 +1,6 @@
 import "./App.css";
 import Search from "./components/Search";
 import Results from "./components/Results";
-import logo from "./assets/images/logo.png";
 import { useState } from "react";
 
 function App() {
@@ -10,7 +9,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} alt="" />
+        <img src="images/logo.png" alt="" />
       </header>
       <main>
         <Search setStatus={setStatus} setSearchData={setSearchData} />

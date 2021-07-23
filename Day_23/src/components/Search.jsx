@@ -1,4 +1,3 @@
-import search from "../assets/images/search.svg";
 import useFetch from "./FetchResults";
 import { useState } from "react";
 
@@ -23,7 +22,7 @@ const Search = ({ setStatus, setSearchData }) => {
           setSearchVal(e.target.value);
         }}
       />
-      <img src={search} alt="" onClick={getDataFromUrl} />
+      <img src="images/search.svg" alt="" onClick={getDataFromUrl} />
     </div>
   );
 };
