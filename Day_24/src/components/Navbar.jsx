@@ -4,18 +4,9 @@ const Navbar = () => {
   return (
     <>
       <nav>
-        <Link to="/">
-          <button>Home</button>
-        </Link>
-        <Link to="/about">
-          <button>About</button>
-        </Link>
-        <Link to="/profile">
-          <button>Profile</button>
-        </Link>
-        <Link to="/dashboard">
-          <button>Dashboard</button>
-        </Link>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/profile">Profile</Link>
       </nav>
     </>
   );

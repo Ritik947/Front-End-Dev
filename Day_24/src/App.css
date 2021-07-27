@@ -1,10 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Baloo Bhai 2", cursive;
 }
 
 .App {
+  width: 100%;
+  background-color: rgb(195, 240, 240);
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,7 +22,7 @@
   width: 100%;
   height: 4rem;
   font-size: 2.5rem;
-  padding: 0.5rem;
+  /* padding: 0.5rem; */
   text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #ffff, 0 -2px 0 #fff,
     1px 1px #fff;
   text-align: center;
@@ -27,30 +33,120 @@ nav {
   width: 100%;
   background-color: #041e42;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  padding: 1rem 0;
+  padding: 1rem 15rem;
 }
 
-nav button {
+nav a {
   display: flex;
   align-items: center;
-  outline: 0;
-  border: 0;
   cursor: pointer;
   width: max-content;
   height: 2rem;
-  padding: 1rem;
   font-size: 1.5rem;
-  border-radius: 2rem;
-  transition: 0.4s;
-}
-
-nav > a {
+  transition: 0.5s;
   text-decoration: none;
+  color: white;
 }
 
-nav button:hover {
-  box-shadow: inset 0 0 0.5rem 0.1rem blue;
-  transition: 0.4s;
+nav a:hover {
+  border-bottom: 3px solid rgb(73, 172, 187);
+  transition: 0.1s;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-wrapper {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  background-color: whitesmoke;
+  box-shadow: 0 0 0.5rem 0 black;
+}
+
+.input-field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.input-field > input {
+  min-height: 1.5rem;
+  outline: 0;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  border: 1px solid black;
+  border-radius: 2rem;
+}
+
+.form-wrapper > button {
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  width: 6rem;
+  height: 2rem;
+  font-size: 1.2rem;
+  border-radius: 2rem;
+  margin-top: 2rem;
+  background-color: #041e42;
+  color: white;
+}
+
+.login-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+h2,
+h3 {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.logged-in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logged-in > button {
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  width: 6rem;
+  height: 2rem;
+  font-size: 1.2rem;
+  border-radius: 2rem;
+  margin-top: 2rem;
+  background-color: #041e42;
+  color: white;
 }
