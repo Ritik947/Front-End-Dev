@@ -24,6 +24,7 @@ const day_nos = [
   "24",
   "26",
   "27",
+  "28_29",
 ];
 
 for (let i = 0; i < day_nos.length; i++) {
