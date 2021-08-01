@@ -1,0 +1,102 @@
+[
+  {
+    "number": "1",
+    "text": "Letter using HTML"
+  },
+  {
+    "number": "2",
+    "text": "Letter using HTML and CSS"
+  },
+  {
+    "number": "3",
+    "text": "Resume using CSS"
+  },
+  {
+    "number": "4",
+    "text": "Clock using CSS"
+  },
+  {
+    "number": "5",
+    "text": "Calculator using Javascript"
+  },
+  {
+    "number": "8",
+    "text": " No. 46 (100 Day CSS Challenge)"
+  },
+  {
+    "number": "9",
+    "text": "Ticket Reservation using Javascript"
+  },
+  {
+    "number": "10",
+    "text": "Memory Game using Javascript"
+  },
+  {
+    "number": "11",
+    "text": "Quiz App using Javascript"
+  },
+  {
+    "number": "12",
+    "text": "Todo List using Javascript"
+  },
+  {
+    "number": "13",
+    "text": "Random Quotes using Anime quotes API"
+  },
+  {
+    "number": "15",
+    "text": "Implementing Hello World using React CDN"
+  },
+  {
+    "number": "16",
+    "text": "Meme Cards and Chessboard using React functional components"
+  },
+  {
+    "number": "17",
+    "text": "Foodpedia using React props"
+  },
+  {
+    "number": "18",
+    "text": "Chessboard using Inline CSS and reusable React components"
+  },
+  {
+    "number": "19",
+    "text": "State Counter using Class based components"
+  },
+  {
+    "number": "20",
+    "text": "Foodpedia using React Hooks"
+  },
+  {
+    "number": "21",
+    "text": "Calorie Tracker using React Form API"
+  },
+  {
+    "number": "22",
+    "text": "Meme Generator Project using React"
+  },
+  {
+    "number": "23",
+    "text": "Ask-N-Find Search using React custom hooks"
+  },
+  {
+    "number": "24",
+    "text": "Login portal using React Context API and Reducer"
+  },
+  {
+    "number": "25",
+    "text": "Weather App using Bootstrap Components"
+  },
+  {
+    "number": "26",
+    "text": "Input Field Management using Redux"
+  },
+  {
+    "number": "27",
+    "text": "Todo App using Redux"
+  },
+  {
+    "number": "28_29",
+    "text": "Weather App using Redux (Project)"
+  }
+]
