@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.App {
+  width: 100%;
+  background-color: #a4c4f8;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  background-color: #09347a;
+  color: aliceblue;
+  width: 100%;
+  height: 10vh;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.home-link {
+  font-size: 2rem;
+  font-weight: 600;
+  text-shadow: 2px 0 0 #609dff, -2px 0 0 #609dff, 0 2px 0 #609dff,
+    0 -2px 0 #609dff, 1px 1px #609dff;
+  margin-right: 60rem;
+  margin-left: 2rem;
+  cursor: pointer;
+}
+
+.fav-link,
+.cart-link {
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-right: 5rem;
+  margin-top: 0.5rem;
+}
+
+main {
+  width: 100%;
+}
+
+.product-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.product-card {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  cursor: pointer;
+  width: 100%;
+  height: 30rem;
+  box-shadow: 0 0 0.25rem 0 black;
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  box-shadow: 0 0 0.4rem 0 black;
+  transform: scale(1.02);
+  transition: 0.3s;
+}
+
+.product-title {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  height: 2rem;
+  overflow: hidden;
+}
+
+.product-image {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 18rem;
+  height: 18rem;
+}
+
+.product-desc {
+  font-size: 0.8rem;
+  height: 6rem;
+  font-weight: 400;
+  overflow: hidden;
+}
+
+.product-price {
+  font-size: 2rem;
+  font-weight: 600;
+  height: 3rem;
+}
