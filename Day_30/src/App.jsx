@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import DrawCart from "./components/Cart";
 import ProductCatalog from "./screens/ProductCatalog";
 import ProductDetails from "./screens/ProductDetails";
-import ProductFavorites from "./screens/ProductFavorites";
+import Wishlist from "./screens/Wishlist";
 
 function App() {
   return (
@@ -16,11 +16,11 @@ function App() {
           <Route exact path="/">
             <ProductCatalog />
           </Route>
+          <Route exact path="/wishlist">
+            <Wishlist />
+          </Route>
           <Route exact path="/:id">
             <ProductDetails />
-          </Route>
-          <Route exact path="/fav">
-            <ProductFavorites />
           </Route>
         </Switch>
       </Router>

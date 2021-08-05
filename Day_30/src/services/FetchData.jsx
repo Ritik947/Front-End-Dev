@@ -4,10 +4,4 @@ const FetchProducts = async () => {
   return res;
 };
 
-const FetchProduct = async (pid) => {
-  const data = await fetch(`https://fakestoreapi.com/products/${pid}`);
-  const res = await data.json();
-  return res;
-};
-
-export { FetchProducts, FetchProduct };
+export { FetchProducts };

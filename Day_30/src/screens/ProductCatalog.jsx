@@ -1,26 +1,27 @@
 import ProductCard from "../components/ProductCard";
-import { FetchProducts } from "../services/FetchData";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchAllProducts } from "../redux/slices/ProductSlice";
 
 const ProductCatalog = () => {
-  const [products, setProducts] = useState(null);
+  const { products, status } = useSelector((state) => state.product);
+  const dispatch = useDispatch();
   useEffect(() => {
-    FetchProducts().then((data) => {
-      setProducts(data);
-    });
-  }, []);
-  console.log(products);
+    if (status === "success") return;
+    dispatch(fetchAllProducts());
+  }, [dispatch, status]);
   return (
     <div className="product-grid">
-      {!products
+      {status === "loading"
         ? "Loading Products"
-        : products.map((product, index) => (
+        : products.map((item, index) => (
             <ProductCard
-              key={index}
-              title={product.title}
-              image={product.image}
-              desc={product.description}
-              price={product.price}
+              key={item.id}
+              id={item.id}
+              title={item.title}
+              image={item.image}
+              desc={item.description}
+              price={item.price}
             />
           ))}
     </div>
