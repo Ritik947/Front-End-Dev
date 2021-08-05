@@ -1,3 +1,5 @@
+/* Global Declarations */
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 
 * {
@@ -12,11 +14,15 @@ a {
   text-decoration: none;
 }
 
+/* Main App */
+
 .App {
   width: 100%;
   background-color: #a4c4f8;
   min-height: 100vh;
 }
+
+/* Navbar */
 
 header {
   display: flex;
@@ -47,6 +53,8 @@ header {
   margin-top: 0.5rem;
 }
 
+/* Product Catalog */
+
 main {
   width: 100%;
 }
@@ -59,7 +67,10 @@ main {
   gap: 2rem;
 }
 
+/* Product Card */
+
 .product-card {
+  position: relative;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -70,6 +81,14 @@ main {
   height: 30rem;
   box-shadow: 0 0 0.15rem 0 #666;
   transition: 0.15s;
+}
+
+.heart {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .product-card:hover {
@@ -106,6 +125,8 @@ main {
   font-weight: 600;
   height: 3rem;
 }
+
+/* Product Details */
 
 .product-details {
   padding: 5rem;
@@ -173,4 +194,55 @@ main {
 .add-to-cart:hover {
   background-color: #245097;
   transition: 0.2s;
+}
+
+/* Wishlist */
+
+.wish-container {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 50vh;
+}
+
+.wish-item {
+  background-color: white;
+  box-shadow: inset 0 0 0.25rem 0 #09347a;
+  padding: 1rem;
+  display: flex;
+  width: 50%;
+  margin-bottom: 1rem;
+}
+
+.wish-image {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 10vw;
+  height: 10vw;
+}
+
+.wish-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.wish-price {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.delete {
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+  fill: #aaa;
+  transition: 0.2s;
+}
+
+.delete:hover {
+  transition: 0.4s;
+  fill: red;
 }

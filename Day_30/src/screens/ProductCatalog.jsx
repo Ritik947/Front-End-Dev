@@ -5,6 +5,10 @@ import { fetchAllProducts } from "../redux/slices/ProductSlice";
 
 const ProductCatalog = () => {
   const { products, status } = useSelector((state) => state.product);
+  const { wishlistItems } = useSelector((state) => state.wishlist);
+  const isInWishlist = (id) => {
+    return wishlistItems.some((item) => item.id === id);
+  };
   const dispatch = useDispatch();
   useEffect(() => {
     if (status === "success") return;
@@ -22,6 +26,7 @@ const ProductCatalog = () => {
               image={item.image}
               desc={item.description}
               price={item.price}
+              inWishlist={isInWishlist(item.id)}
             />
           ))}
     </div>

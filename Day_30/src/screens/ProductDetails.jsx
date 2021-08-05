@@ -20,7 +20,9 @@ const ProductDetails = () => {
       >
         <div className="product-details-title">{item.title}</div>
         <div className="product-details-desc">{item.description}</div>
-        <div className="product-details-price">Rs. {70 * item.price}</div>
+        <div className="product-details-price">
+          Rs. {Math.ceil(70 * item.price)}
+        </div>
         <div className="quantity-selector">
           <button
             onClick={() => {
