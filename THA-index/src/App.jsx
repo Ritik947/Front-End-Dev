@@ -23,13 +23,25 @@ function App() {
           Within here, I have deployed the take-home-assignments I completed as
           part of the Frontend Course provided by Devsnest.
         </div>
-        <div className="grid-container">
-          {cards
-            ? cards.map((card, index) => (
+        <>
+          {cards ? (
+            <div className="grid-container">
+              {cards.map((card, index) => (
                 <ThaCard key={index} number={card.number} text={card.text} />
-              ))
-            : "Loading THAs"}
-        </div>
+              ))}
+            </div>
+          ) : (
+            <div
+              style={{
+                fontSize: "2rem",
+                fontWeight: "600",
+                textAlign: "center",
+              }}
+            >
+              Loading THAs
+            </div>
+          )}
+        </>
       </main>
     </div>
   );
