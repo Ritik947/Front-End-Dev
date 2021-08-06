@@ -25,6 +25,8 @@ a {
 /* Navbar */
 
 header {
+  z-index: 1;
+  position: fixed;
   display: flex;
   background-color: #09347a;
   color: aliceblue;
@@ -47,10 +49,18 @@ header {
 .wish-link,
 .cart-link {
   cursor: pointer;
-  font-size: 1.5rem;
+  margin-top: 0.3rem;
   font-weight: 500;
   margin-right: 3rem;
-  margin-top: 0.5rem;
+}
+
+.wish-link {
+  font-size: 2rem;
+  color: rgba(255, 0, 0, 0.9);
+}
+
+.cart-link {
+  font-size: 1.7rem;
 }
 
 /* Product Catalog */
@@ -199,11 +209,11 @@ main {
 /* Wishlist */
 
 .wish-container {
+  width: 100%;
   margin-top: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 50vh;
 }
 
 .wish-item {
@@ -235,8 +245,8 @@ main {
 }
 
 .delete {
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   cursor: pointer;
   fill: #aaa;
   transition: 0.2s;
@@ -245,4 +255,106 @@ main {
 .delete:hover {
   transition: 0.4s;
   fill: red;
+}
+
+/* Cart */
+
+.overlay {
+  z-index: 5;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cart {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  height: 100vh;
+  background-color: #eee;
+}
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: black;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #aaa;
+}
+
+.cart-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  overflow-y: scroll;
+}
+
+.cart-container::-webkit-scrollbar {
+  display: none;
+}
+
+.cart-item {
+  background-color: white;
+  box-shadow: 0 0 0.3rem 0.1rem #ddd;
+  padding: 0.75rem;
+  display: flex;
+  width: 90%;
+  margin-bottom: 1rem;
+}
+
+.cart-image {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 10vw;
+  height: 10vw;
+}
+
+.cart-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.cart-price {
+  margin-top: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.cart-quantity-selector {
+  font-size: 1rem;
+  width: 8rem;
+  height: 1.5rem;
+}
+
+.cart-quantity-selector input {
+  border: 1px solid black;
+  padding-left: 1rem;
+  text-align: center;
+  background-color: white;
+  width: 40%;
+}
+
+.cart-quantity-selector button {
+  border: 1px solid black;
+  background-color: white;
+  width: 30%;
+}
+
+.cart-quantity-selector button:hover {
+  background-color: #ddd;
+}
+
+.noscroll {
+  position: fixed;
+  overflow-y: scroll;
 }

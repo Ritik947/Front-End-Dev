@@ -5,42 +5,47 @@ import { removeItemFromWishlist } from "../redux/slices/WishSlice";
 const Wishlist = () => {
   const { wishlistItems } = useSelector((state) => state.wishlist);
   const dispatch = useDispatch();
-  return (
+  return wishlistItems.length === 0 ? (
+    <div
+      style={{
+        fontSize: "1.5rem",
+        fontWeight: "700",
+        marginTop: "4rem",
+        textAlign: "center",
+      }}
+    >
+      Add items to wishlist
+    </div>
+  ) : (
     <div className="wish-container">
-      {wishlistItems.length === 0 ? (
-        <div style={{ fontSize: "1.5rem", fontWeight: "700" }}>
-          Add items to wishlist
-        </div>
-      ) : (
-        wishlistItems.map((item, index) => (
-          <div className="wish-item" key={index}>
-            <div
-              className="wish-image"
-              style={{ backgroundImage: `url(${item.image})` }}
-            ></div>
-            <div
-              style={{
-                width: "35vw",
-                display: "flex",
-                flexDirection: "column",
-                padding: "0 1rem",
-                justifyContent: "center",
-              }}
-            >
-              <div className="wish-title">{item.title}</div>
-              <div className="wish-price">Rs. {Math.ceil(70 * item.price)}</div>
-            </div>
-            <button
-              onClick={() => {
-                dispatch(removeItemFromWishlist(item.id));
-                console.log(wishlistItems);
-              }}
-            >
-              <Delete />
-            </button>
+      {wishlistItems.map((item, index) => (
+        <div className="wish-item" key={index}>
+          <div
+            className="wish-image"
+            style={{ backgroundImage: `url(${item.image})` }}
+          ></div>
+          <div
+            style={{
+              width: "35vw",
+              display: "flex",
+              flexDirection: "column",
+              padding: "0 1rem",
+              justifyContent: "center",
+            }}
+          >
+            <div className="wish-title">{item.title}</div>
+            <div className="wish-price">Rs. {Math.ceil(70 * item.price)}</div>
           </div>
-        ))
-      )}
+          <button
+            onClick={() => {
+              dispatch(removeItemFromWishlist(item.id));
+              console.log(wishlistItems);
+            }}
+          >
+            <Delete />
+          </button>
+        </div>
+      ))}
     </div>
   );
 };

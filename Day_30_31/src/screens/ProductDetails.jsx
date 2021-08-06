@@ -1,9 +1,22 @@
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
+import { addItemInCart, updateQuantity } from "../redux/slices/CartSlice";
 
 const ProductDetails = () => {
   const item = useSelector((state) => state.product.currentProduct);
+  const { cartItems } = useSelector((state) => state.cart);
   const [amount, setAmount] = useState(1);
+  const dispatch = useDispatch();
+  const addToCart = () => {
+    let inCart = cartItems.some((el) => el.id === item.id);
+    if (inCart) {
+      let index = cartItems.findIndex((el) => el.id === item.id);
+      dispatch(updateQuantity({ index, qty: amount }));
+    } else {
+      dispatch(addItemInCart({ ...item, quantity: amount }));
+    }
+  };
+
   return (
     <div className="product-details">
       <div
@@ -48,7 +61,9 @@ const ProductDetails = () => {
             +
           </button>
         </div>
-        <button className="add-to-cart">Add to cart</button>
+        <button className="add-to-cart" onClick={addToCart}>
+          Add to cart
+        </button>
       </div>
     </div>
   );
