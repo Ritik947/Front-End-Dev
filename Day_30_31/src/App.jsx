@@ -15,12 +15,12 @@ function App() {
     <div className={isCartOpen ? "App noscroll" : "App"}>
       <div
         className="overlay"
-        style={{ display: isCartOpen ? "block" : "none" }}
+        style={{ visibility: isCartOpen ? "" : "hidden" }}
         onClick={() => {
           dispatch(toggleCart());
         }}
       ></div>
-      <Router>
+      <Router basename="/Front-End-Dev/Day_30_31/build/">
         <Navbar />
         <DrawCart />
         <Switch>
